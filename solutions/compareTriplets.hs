@@ -22,13 +22,32 @@ import System.IO.Unsafe
 --  1. INTEGER_ARRAY a
 --  2. INTEGER_ARRAY b
 --
+
 {-
-comment: this one was solved with python, i will solve it with haskell soon.
+def compareTriplets(a, b):
+    apoints = 0
+    bpoints = 0
+    for i in range(len(a)):
+        if a[i] > b[i]:
+            apoints+=1
+        
+        if a[i] < b[i]:
+            bpoints+=1
+
+        else:
+            apoints+=0
+            bpoints+=0
+            
+    return [apoints, bpoints]
 -}
 
-compareTriplets a b = let
-    apoints = takeWhile (p) (map 
-    
+compareTriplets :: [Int] -> [Int] -> [Int]
+compareTriplets a b = Data.List.foldl updatePoints [0, 0] (Data.List.zip a b)
+  where
+    updatePoints [apoints, bpoints] (x, y)
+      | x > y     = [apoints + 1, bpoints]
+      | x < y     = [apoints, bpoints + 1]
+      | otherwise = [apoints, bpoints]
     
 lstrip = Data.Text.unpack . Data.Text.stripStart . Data.Text.pack
 rstrip = Data.Text.unpack . Data.Text.stripEnd . Data.Text.pack
