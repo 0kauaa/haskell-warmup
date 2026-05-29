@@ -23,7 +23,7 @@ import System.IO.Unsafe
 --  2. INTEGER_ARRAY b
 --
 {-
-foi resolvido em python, em breve vou resolver em haskell e atualizar
+comment: this one was solved with python, i will solve it with haskell soon.
 -}
 
 compareTriplets a b = let
