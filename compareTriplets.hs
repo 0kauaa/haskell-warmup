@@ -22,6 +22,9 @@ import System.IO.Unsafe
 --  1. INTEGER_ARRAY a
 --  2. INTEGER_ARRAY b
 --
+{-
+foi resolvido em python, em breve vou resolver em haskell e atualizar
+-}
 
 compareTriplets a b = let
     apoints = takeWhile (p) (map 
