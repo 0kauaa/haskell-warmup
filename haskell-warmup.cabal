@@ -1,0 +1,72 @@
+cabal-version:      3.0
+name:               haskell-warmup
+version:            0.1.0.0
+description:        HackerRank warmup solutions in Haskell
+homepage:           https://github.com/0kauaa/haskell-warmup
+license:            MIT
+license-file:       LICENSE
+author:             Kauã Santana
+maintainer:         kauassilva0023@gmail.com
+build-type:         Simple
+
+common warnings
+    ghc-options:
+        -Wall
+        -Wno-unused-imports 
+        -Wno-missing-signatures 
+        -Wno-unused-top-binds
+        -Wno-name-shadowing
+
+common hackerRankDeps
+    import: warnings
+
+    hs-source-dirs:
+        solutions
+
+    default-language:
+        Haskell2010
+
+    build-depends:
+        base ^>=4.18.3.0,
+        array,
+        split,
+        text,
+        containers
+
+    default-extensions:
+        DuplicateRecordFields
+        FlexibleInstances
+        UndecidableInstances
+
+executable solveMeFirst
+    import: hackerRankDeps
+    main-is: solveMeFirst.hs
+
+executable simpleArraySum
+    import: hackerRankDeps
+    main-is: simpleArraySum.hs
+
+executable compareTriplets
+    import: hackerRankDeps
+    main-is: compareTriplets.hs
+
+executable aVeryBigSum
+    import: hackerRankDeps
+    main-is: aVeryBigSum.hs
+
+executable diagonalDifference
+    import: hackerRankDeps
+    main-is: diagonalDifference.hs
+
+executable plusMinus
+    import: hackerRankDeps
+    main-is: plusMinus.hs
+
+executable staircase
+    import: hackerRankDeps
+    main-is: staircase.hs
+
+-- new ones
+-- executable filename
+--    import: hackerRankDeps
+--    main-is: filename.hs
