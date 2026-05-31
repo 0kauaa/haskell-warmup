@@ -30,6 +30,7 @@ rstrip = Data.Text.unpack . Data.Text.stripEnd . Data.Text.pack
 
 main :: IO()
 main = do
+    -- some lines were commented to run outside of hackerrank
     --stdout <- getEnv "OUTPUT_PATH"
     --fptr <- openFile stdout WriteMode
 
